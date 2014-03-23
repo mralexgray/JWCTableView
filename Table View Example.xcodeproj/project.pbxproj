@@ -18,6 +18,9 @@
 		BE3982ED18DF365F0057E405 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE3982CC18DF365F0057E405 /* Cocoa.framework */; };
 		BE3982F518DF365F0057E405 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BE3982F318DF365F0057E405 /* InfoPlist.strings */; };
 		BE3982F718DF365F0057E405 /* Table_View_ExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3982F618DF365F0057E405 /* Table_View_ExampleTests.m */; };
+		BE39830418DF37190057E405 /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE39830218DF37190057E405 /* MainWindowController.m */; };
+		BE39830518DF37190057E405 /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE39830318DF37190057E405 /* MainWindowController.xib */; };
+		BE39830D18DF3C4D0057E405 /* JWCTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE39830C18DF3C4D0057E405 /* JWCTableView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +53,11 @@
 		BE3982F218DF365F0057E405 /* Table View ExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Table View ExampleTests-Info.plist"; sourceTree = "<group>"; };
 		BE3982F418DF365F0057E405 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BE3982F618DF365F0057E405 /* Table_View_ExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Table_View_ExampleTests.m; sourceTree = "<group>"; };
+		BE39830118DF37190057E405 /* MainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWindowController.h; sourceTree = "<group>"; };
+		BE39830218DF37190057E405 /* MainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainWindowController.m; sourceTree = "<group>"; };
+		BE39830318DF37190057E405 /* MainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindowController.xib; sourceTree = "<group>"; };
+		BE39830B18DF3C4D0057E405 /* JWCTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JWCTableView.h; path = Source/JWCTableView.h; sourceTree = SOURCE_ROOT; };
+		BE39830C18DF3C4D0057E405 /* JWCTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JWCTableView.m; path = Source/JWCTableView.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,9 +125,11 @@
 			children = (
 				BE3982DE18DF365F0057E405 /* AppDelegate.h */,
 				BE3982DF18DF365F0057E405 /* AppDelegate.m */,
-				BE3982E118DF365F0057E405 /* MainMenu.xib */,
 				BE3982E418DF365F0057E405 /* Images.xcassets */,
+				BE3982E118DF365F0057E405 /* MainMenu.xib */,
 				BE3982D318DF365F0057E405 /* Supporting Files */,
+				BE39830A18DF3C290057E405 /* Table View */,
+				BE39830018DF36F10057E405 /* Windows */,
 			);
 			path = "Table View Example";
 			sourceTree = "<group>";
@@ -152,6 +162,25 @@
 				BE3982F318DF365F0057E405 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BE39830018DF36F10057E405 /* Windows */ = {
+			isa = PBXGroup;
+			children = (
+				BE39830118DF37190057E405 /* MainWindowController.h */,
+				BE39830218DF37190057E405 /* MainWindowController.m */,
+				BE39830318DF37190057E405 /* MainWindowController.xib */,
+			);
+			name = Windows;
+			sourceTree = "<group>";
+		};
+		BE39830A18DF3C290057E405 /* Table View */ = {
+			isa = PBXGroup;
+			children = (
+				BE39830B18DF3C4D0057E405 /* JWCTableView.h */,
+				BE39830C18DF3C4D0057E405 /* JWCTableView.m */,
+			);
+			name = "Table View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +263,7 @@
 				BE3982E518DF365F0057E405 /* Images.xcassets in Resources */,
 				BE3982DD18DF365F0057E405 /* Credits.rtf in Resources */,
 				BE3982E318DF365F0057E405 /* MainMenu.xib in Resources */,
+				BE39830518DF37190057E405 /* MainWindowController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +282,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE39830D18DF3C4D0057E405 /* JWCTableView.m in Sources */,
+				BE39830418DF37190057E405 /* MainWindowController.m in Sources */,
 				BE3982E018DF365F0057E405 /* AppDelegate.m in Sources */,
 				BE3982D918DF365F0057E405 /* main.m in Sources */,
 			);
@@ -389,6 +421,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Table View Example/Table View Example-Prefix.pch";
 				INFOPLIST_FILE = "Table View Example/Table View Example-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -402,6 +435,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Table View Example/Table View Example-Prefix.pch";
 				INFOPLIST_FILE = "Table View Example/Table View Example-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

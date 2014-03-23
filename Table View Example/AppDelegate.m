@@ -7,12 +7,23 @@
 //
 
 #import "AppDelegate.h"
+#import "MainWindowController.h"
+
+@interface AppDelegate ()
+{
+    MainWindowController *mainWindowController;
+}
+
+@end
 
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    // Insert code here to initialize your application
+    mainWindowController = [[MainWindowController alloc] init];
+    [mainWindowController showWindow:self];
+    
+    self.window = mainWindowController.window;
 }
 
 @end
