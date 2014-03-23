@@ -1,4 +1,4 @@
-//
+ //
 //  MainWindowController.m
 //  Table View Example
 //
@@ -29,6 +29,9 @@
 - (void)windowDidLoad
 {
     [super windowDidLoad];
+    
+    [self.tableView setDelegate:self.tableView];
+    [self.tableView setDataSource:self.tableView];
     
     [self.tableView reloadData];
 }
@@ -142,10 +145,10 @@
             break;
     }
     
-    [view.textField setStringValue:[NSString stringWithFormat:@"Section %ld header",(long)section]];
-    
     view = [tableView makeViewWithIdentifier:cellIdentifier owner:self];
     
+    [view.textField setStringValue:[NSString stringWithFormat:@"Section %ld header",(long)section]];
+
     return view;
 }
 
@@ -171,10 +174,10 @@
             break;
     }
     
-    [view.textField setStringValue:[NSString stringWithFormat:@"Section %ld row %ld cell ",indexPath.section,indexPath.row]];
-    
     view = [tableView makeViewWithIdentifier:cellIdentifier owner:self];
     
+    [view.textField setStringValue:[NSString stringWithFormat:@"Section %ld row %ld cell ",indexPath.section,indexPath.row]];
+
     return view;
 }
 

@@ -17,18 +17,18 @@
 
 @implementation JWCTableView
 
-- (id)initWithFrame:(NSRect)frame
-{
-    self = [super initWithFrame:frame];
-    
-    if (self != nil)
-    {
-        [self setDelegate:self];
-        [self setDataSource:self];
-    }
-    
-    return self;
-}
+//- (id)init
+//{
+//    self = [super init];
+//    
+//    if (self != nil)
+//    {
+//        [self setDelegate:self];
+//        [self setDataSource:self];
+//    }
+//    
+//    return self;
+//}
 
 #pragma mark NSTableViewDataSource methods
 
