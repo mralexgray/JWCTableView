@@ -10,24 +10,38 @@
 
 @protocol JWCTableViewDelegate <NSObject>
 
--(void)tableView:(NSTableView *)tableView shouldSelectRowAtIndexPath:(NSIndexPath *)indexPath;
+-(BOOL)tableView:(NSTableView *)tableView shouldSelectRowAtIndexPath:(NSIndexPath *)indexPath;
+-(BOOL)tableView:(NSTableView *)tableView shouldSelectSection:(NSInteger)section;
 
 @end
 
 @protocol JWCTableViewDataSource <NSObject>
 
--(NSInteger)numberOfSectionsInTableView:(NSTableView *)tableView;
--(NSView *)tableView:(NSTableView *)tableView viewForHeaderInSection:(NSInteger)section;
--(BOOL)tableView:(NSTableView *)tableView hasHeaderViewForSection:(NSInteger)section;
+//Number of rows in section
 -(NSInteger)tableView:(NSTableView *)tableView numberOfRowsInSection:(NSInteger)section;
+
+@optional
+
+//Number of sections
+-(NSInteger)numberOfSectionsInTableView:(NSTableView *)tableView;
+
+//Has a header view for a section
+-(BOOL)tableView:(NSTableView *)tableView hasHeaderViewForSection:(NSInteger)section;
+
+//Height related
+-(CGFloat)tableView:(NSTableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
+-(CGFloat)tableView:(NSTableView *)tableView heightForHeaderViewForSection:(NSInteger)section;
+
+//View related
+-(NSView *)tableView:(NSTableView *)tableView viewForHeaderInSection:(NSInteger)section;
 -(NSView *)tableView:(NSTableView *)tableView viewForIndexPath:(NSIndexPath *)indexPath;
 
 @end
 
 @interface JWCTableView : NSTableView <NSTableViewDataSource, NSTableViewDelegate>
 
-@property (nonatomic, assign) id <JWCTableViewDataSource> jwcTableViewDataSource;
-@property (nonatomic, assign) id <JWCTableViewDelegate> jwcTableViewDelegate;
+@property (nonatomic, assign) IBOutlet id <JWCTableViewDataSource> jwcTableViewDataSource;
+@property (nonatomic, assign) IBOutlet id <JWCTableViewDelegate> jwcTableViewDelegate;
 
 @end
 

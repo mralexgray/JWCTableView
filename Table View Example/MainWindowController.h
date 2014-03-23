@@ -7,7 +7,10 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "JWCTableView.h"
 
-@interface MainWindowController : NSWindowController
+@interface MainWindowController : NSWindowController <JWCTableViewDataSource, JWCTableViewDelegate>
+
+@property (weak) IBOutlet JWCTableView *tableView;
 
 @end
