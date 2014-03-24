@@ -27,16 +27,6 @@
     return self;
 }
 
-- (void)windowDidLoad
-{
-    [super windowDidLoad];
-    
-//    [self.tableView setDelegate:self.tableView];
-//    [self.tableView setDataSource:self.tableView];
-    
-    [self.tableView reloadData];
-}
-
 #pragma mark JWCTableViewDataSource methods
 
 //Number of rows in section
@@ -89,36 +79,20 @@
 //Height related
 -(CGFloat)tableView:(NSTableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    CGFloat height = 0;
-    
     NSView *view = [self tableView:tableView
                   viewForIndexPath:indexPath];
     
-    height = view.frame.size.height;
-    
-    //This is just to handle that the rows cannot be 0
-    if (height == 0)
-    {
-        height = 1;
-    }
+    CGFloat height = view.frame.size.height;
     
     return height;
 }
 
 -(CGFloat)tableView:(NSTableView *)tableView heightForHeaderViewForSection:(NSInteger)section
 {
-    CGFloat height = 0;
-    
     NSView *view = [self tableView:tableView
             viewForHeaderInSection:section];
     
-    height = view.frame.size.height;
-    
-    //This is just to handle that the rows cannot be 0
-    if (height == 0)
-    {
-        height = 1;
-    }
+    CGFloat height = view.frame.size.height;
     
     return height;
 }
@@ -126,27 +100,7 @@
 //View related
 -(NSView *)tableView:(NSTableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    NSTableCellView *view = nil;
-    
-    NSString *cellIdentifier = nil;
-    
-    switch (section)
-    {
-        case 0:
-            cellIdentifier = @"sectionOneHeaderView";
-            break;
-        case 1:
-            cellIdentifier = @"sectionTwoHeaderView";
-            break;
-        case 2:
-            cellIdentifier = @"sectionThreeHeaderView";
-            break;
-            
-        default:
-            break;
-    }
-    
-    view = [tableView makeViewWithIdentifier:cellIdentifier owner:self];
+    NSTableCellView *view = [tableView makeViewWithIdentifier:@"sectionHeaderView" owner:self];
     
     [view.textField setStringValue:[NSString stringWithFormat:@"Section %ld header",(long)section]];
 
@@ -155,27 +109,7 @@
 
 -(NSView *)tableView:(NSTableView *)tableView viewForIndexPath:(NSIndexPath *)indexPath
 {
-    ButtonTableCellView *view = nil;
-    
-    NSString *cellIdentifier = nil;
-    
-    switch (indexPath.section)
-    {
-        case 0:
-            cellIdentifier = @"sectionOneCellView";
-            break;
-        case 1:
-            cellIdentifier = @"sectionTwoCellView";
-            break;
-        case 2:
-            cellIdentifier = @"sectionThreeCellView";
-            break;
-            
-        default:
-            break;
-    }
-    
-    view = [tableView makeViewWithIdentifier:cellIdentifier owner:self];
+    ButtonTableCellView *view = [tableView makeViewWithIdentifier:@"rowCellView" owner:self];
     
     [view.textField setStringValue:[NSString stringWithFormat:@"Section %ld row %ld cell ",indexPath.section,indexPath.row]];
     [view.button setTarget:self];

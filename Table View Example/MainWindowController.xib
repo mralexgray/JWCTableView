@@ -52,15 +52,15 @@
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
-                                                        <tableCellView identifier="sectionOneHeaderView" id="ICo-5M-Jcx">
+                                                        <tableCellView identifier="sectionHeaderView" id="ICo-5M-Jcx">
                                                             <rect key="frame" x="1" y="1" width="475" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" id="3RD-6p-DtQ">
                                                                     <rect key="frame" x="0.0" y="0.0" width="475" height="17"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Header cell 1" id="nnb-DE-j7S">
-                                                                        <font key="font" metaFont="system"/>
+                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="center" title="Header cell" id="nnb-DE-j7S">
+                                                                        <font key="font" metaFont="systemBold"/>
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
@@ -70,98 +70,8 @@
                                                                 <outlet property="textField" destination="3RD-6p-DtQ" id="SP8-YJ-y4c"/>
                                                             </connections>
                                                         </tableCellView>
-                                                        <tableCellView identifier="sectionTwoHeaderView" id="pX3-y0-7GC">
+                                                        <tableCellView identifier="rowCellView" id="syf-Hb-5Th" customClass="ButtonTableCellView">
                                                             <rect key="frame" x="1" y="20" width="475" height="17"/>
-                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                            <subviews>
-                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" id="6qp-fz-jfg">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="475" height="17"/>
-                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="center" title="Header cell 2" id="1dT-SU-j9m">
-                                                                        <font key="font" metaFont="system"/>
-                                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                                    </textFieldCell>
-                                                                </textField>
-                                                            </subviews>
-                                                            <connections>
-                                                                <outlet property="textField" destination="6qp-fz-jfg" id="GCH-3y-DoF"/>
-                                                            </connections>
-                                                        </tableCellView>
-                                                        <tableCellView identifier="sectionThreeHeaderView" id="wow-nf-ZhV">
-                                                            <rect key="frame" x="1" y="39" width="475" height="17"/>
-                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                            <subviews>
-                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" id="eAv-Sy-L8m">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="475" height="17"/>
-                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="right" title="Header cell 3" id="BZN-Io-TEQ">
-                                                                        <font key="font" metaFont="system"/>
-                                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                                    </textFieldCell>
-                                                                </textField>
-                                                            </subviews>
-                                                            <connections>
-                                                                <outlet property="textField" destination="eAv-Sy-L8m" id="KDz-9Q-qZT"/>
-                                                            </connections>
-                                                        </tableCellView>
-                                                        <tableCellView identifier="sectionOneCellView" id="Ami-iP-hTX" customClass="ButtonTableCellView">
-                                                            <rect key="frame" x="1" y="58" width="475" height="17"/>
-                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                            <subviews>
-                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" id="A4Q-zZ-MzB">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="475" height="17"/>
-                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="right" title="Row cell 1" id="oNS-Sm-UYP">
-                                                                        <font key="font" metaFont="system"/>
-                                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                                    </textFieldCell>
-                                                                </textField>
-                                                                <button verticalHuggingPriority="750" id="9XH-tm-5uH">
-                                                                    <rect key="frame" x="8" y="-9" width="82" height="32"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                    <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="kEq-Zr-tLB">
-                                                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                                        <font key="font" metaFont="system"/>
-                                                                    </buttonCell>
-                                                                </button>
-                                                            </subviews>
-                                                            <connections>
-                                                                <outlet property="button" destination="9XH-tm-5uH" id="ls2-7q-00G"/>
-                                                                <outlet property="textField" destination="A4Q-zZ-MzB" id="VzQ-Y1-wOD"/>
-                                                            </connections>
-                                                        </tableCellView>
-                                                        <tableCellView identifier="sectionTwoCellView" id="eeX-4b-axu" customClass="ButtonTableCellView">
-                                                            <rect key="frame" x="1" y="77" width="475" height="17"/>
-                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                            <subviews>
-                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" id="44M-fe-34d">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="475" height="17"/>
-                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="center" title="Row cell 2" id="c8W-IY-TjF">
-                                                                        <font key="font" metaFont="system"/>
-                                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                                    </textFieldCell>
-                                                                </textField>
-                                                                <button verticalHuggingPriority="750" id="QyH-yV-RU4">
-                                                                    <rect key="frame" x="396" y="-10" width="82" height="32"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                    <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="nFF-6J-6K6">
-                                                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                                        <font key="font" metaFont="system"/>
-                                                                    </buttonCell>
-                                                                </button>
-                                                            </subviews>
-                                                            <connections>
-                                                                <outlet property="button" destination="QyH-yV-RU4" id="sEb-TO-ibF"/>
-                                                                <outlet property="textField" destination="44M-fe-34d" id="tPM-By-v6h"/>
-                                                            </connections>
-                                                        </tableCellView>
-                                                        <tableCellView identifier="sectionThreeCellView" id="syf-Hb-5Th" customClass="ButtonTableCellView">
-                                                            <rect key="frame" x="1" y="96" width="475" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" id="jOc-rY-pXu">
