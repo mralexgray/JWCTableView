@@ -17,18 +17,18 @@
 
 @implementation JWCTableView
 
-//- (id)init
-//{
-//    self = [super init];
-//    
-//    if (self != nil)
-//    {
-//        [self setDelegate:self];
-//        [self setDataSource:self];
-//    }
-//    
-//    return self;
-//}
+-(id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    
+    if (self != nil)
+    {
+        [self setDelegate:self];
+        [self setDataSource:self];
+    }
+    
+    return self;
+}
 
 #pragma mark NSTableViewDataSource methods
 
@@ -257,6 +257,30 @@
     }
     
     return 0;
+}
+
+-(NSIndexPath *)indexPathForView:(NSView *)view
+{
+    NSInteger row = [super rowForView:view];
+    
+    BOOL rowIsSectionHeader = NO;
+    
+    NSInteger section = [self tableView:self
+                      getSectionFromRow:row
+                              isSection:&rowIsSectionHeader];
+    
+    if (rowIsSectionHeader == YES)
+    {
+        //Not sure what I should do here as they really touched a section header and not a row...
+        return nil;
+    }
+    else
+    {
+        NSIndexPath *indexPath = [self tableView:self
+                                 indexPathForRow:row];
+        
+        return indexPath;
+    }
 }
 
 @end

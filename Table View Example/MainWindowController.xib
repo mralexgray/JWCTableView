@@ -106,7 +106,7 @@
                                                                 <outlet property="textField" destination="eAv-Sy-L8m" id="KDz-9Q-qZT"/>
                                                             </connections>
                                                         </tableCellView>
-                                                        <tableCellView identifier="sectionOneCellView" id="Ami-iP-hTX">
+                                                        <tableCellView identifier="sectionOneCellView" id="Ami-iP-hTX" customClass="ButtonTableCellView">
                                                             <rect key="frame" x="1" y="58" width="475" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
@@ -119,12 +119,21 @@
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                 </textField>
+                                                                <button verticalHuggingPriority="750" id="9XH-tm-5uH">
+                                                                    <rect key="frame" x="8" y="-9" width="82" height="32"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                    <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="kEq-Zr-tLB">
+                                                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                                        <font key="font" metaFont="system"/>
+                                                                    </buttonCell>
+                                                                </button>
                                                             </subviews>
                                                             <connections>
+                                                                <outlet property="button" destination="9XH-tm-5uH" id="ls2-7q-00G"/>
                                                                 <outlet property="textField" destination="A4Q-zZ-MzB" id="VzQ-Y1-wOD"/>
                                                             </connections>
                                                         </tableCellView>
-                                                        <tableCellView identifier="sectionTwoCellView" id="eeX-4b-axu">
+                                                        <tableCellView identifier="sectionTwoCellView" id="eeX-4b-axu" customClass="ButtonTableCellView">
                                                             <rect key="frame" x="1" y="77" width="475" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
@@ -137,17 +146,26 @@
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                 </textField>
+                                                                <button verticalHuggingPriority="750" id="QyH-yV-RU4">
+                                                                    <rect key="frame" x="396" y="-10" width="82" height="32"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                    <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="nFF-6J-6K6">
+                                                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                                        <font key="font" metaFont="system"/>
+                                                                    </buttonCell>
+                                                                </button>
                                                             </subviews>
                                                             <connections>
+                                                                <outlet property="button" destination="QyH-yV-RU4" id="sEb-TO-ibF"/>
                                                                 <outlet property="textField" destination="44M-fe-34d" id="tPM-By-v6h"/>
                                                             </connections>
                                                         </tableCellView>
-                                                        <tableCellView identifier="sectionThreeCellView" id="syf-Hb-5Th">
+                                                        <tableCellView identifier="sectionThreeCellView" id="syf-Hb-5Th" customClass="ButtonTableCellView">
                                                             <rect key="frame" x="1" y="96" width="475" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" id="jOc-rY-pXu">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="475" height="17"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="171" height="17"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="left" title="Row cell 3" id="jve-QZ-LB4">
                                                                         <font key="font" metaFont="system"/>
@@ -155,8 +173,17 @@
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                 </textField>
+                                                                <button verticalHuggingPriority="750" id="MwT-iI-J8l">
+                                                                    <rect key="frame" x="196" y="-9" width="82" height="32"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                    <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="IMn-xb-S9H">
+                                                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                                        <font key="font" metaFont="system"/>
+                                                                    </buttonCell>
+                                                                </button>
                                                             </subviews>
                                                             <connections>
+                                                                <outlet property="button" destination="MwT-iI-J8l" id="7PY-08-tpo"/>
                                                                 <outlet property="textField" destination="jOc-rY-pXu" id="hk6-8b-Jeq"/>
                                                             </connections>
                                                         </tableCellView>

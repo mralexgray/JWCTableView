@@ -21,6 +21,7 @@
 		BE39830418DF37190057E405 /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE39830218DF37190057E405 /* MainWindowController.m */; };
 		BE39830518DF37190057E405 /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE39830318DF37190057E405 /* MainWindowController.xib */; };
 		BE39830D18DF3C4D0057E405 /* JWCTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE39830C18DF3C4D0057E405 /* JWCTableView.m */; };
+		BE39831918DFB2710057E405 /* ButtonTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE39831818DFB2710057E405 /* ButtonTableCellView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		BE39830318DF37190057E405 /* MainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindowController.xib; sourceTree = "<group>"; };
 		BE39830B18DF3C4D0057E405 /* JWCTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JWCTableView.h; path = Source/JWCTableView.h; sourceTree = SOURCE_ROOT; };
 		BE39830C18DF3C4D0057E405 /* JWCTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JWCTableView.m; path = Source/JWCTableView.m; sourceTree = SOURCE_ROOT; };
+		BE39831718DFB2710057E405 /* ButtonTableCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonTableCellView.h; sourceTree = "<group>"; };
+		BE39831818DFB2710057E405 /* ButtonTableCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonTableCellView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +126,7 @@
 		BE3982D218DF365F0057E405 /* Table View Example */ = {
 			isa = PBXGroup;
 			children = (
+				BE39831618DFB25C0057E405 /* Table Cell Views */,
 				BE3982DE18DF365F0057E405 /* AppDelegate.h */,
 				BE3982DF18DF365F0057E405 /* AppDelegate.m */,
 				BE3982E418DF365F0057E405 /* Images.xcassets */,
@@ -181,6 +185,15 @@
 				BE39830C18DF3C4D0057E405 /* JWCTableView.m */,
 			);
 			name = "Table View";
+			sourceTree = "<group>";
+		};
+		BE39831618DFB25C0057E405 /* Table Cell Views */ = {
+			isa = PBXGroup;
+			children = (
+				BE39831718DFB2710057E405 /* ButtonTableCellView.h */,
+				BE39831818DFB2710057E405 /* ButtonTableCellView.m */,
+			);
+			name = "Table Cell Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE39830D18DF3C4D0057E405 /* JWCTableView.m in Sources */,
+				BE39831918DFB2710057E405 /* ButtonTableCellView.m in Sources */,
 				BE39830418DF37190057E405 /* MainWindowController.m in Sources */,
 				BE3982E018DF365F0057E405 /* AppDelegate.m in Sources */,
 				BE3982D918DF365F0057E405 /* main.m in Sources */,

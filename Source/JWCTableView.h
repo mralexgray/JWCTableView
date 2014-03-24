@@ -10,6 +10,7 @@
 
 @protocol JWCTableViewDelegate <NSObject>
 
+//Selection
 -(BOOL)tableView:(NSTableView *)tableView shouldSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 -(BOOL)tableView:(NSTableView *)tableView shouldSelectSection:(NSInteger)section;
 
@@ -43,8 +44,9 @@
 @property (nonatomic, assign) IBOutlet id <JWCTableViewDataSource> jwcTableViewDataSource;
 @property (nonatomic, assign) IBOutlet id <JWCTableViewDelegate> jwcTableViewDelegate;
 
-@end
+-(NSIndexPath *)indexPathForView:(NSView *)view;
 
+@end
 
 //This is a reimplementation of the NSIndexPath UITableView category.
 @interface NSIndexPath (NSTableView)
