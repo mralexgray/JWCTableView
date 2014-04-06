@@ -125,12 +125,14 @@
     
     NSInteger section = [self tableView:tableView getSectionFromRow:row isSection:&rowIsSectionHeader];
     
-    if (rowIsSectionHeader == YES)
+    if (rowIsSectionHeader == YES &&
+        [self.jwcTableViewDelegate respondsToSelector:@selector(tableView:shouldSelectSection:)] == YES)
     {
         shouldSelect = [self.jwcTableViewDelegate tableView:tableView
                                         shouldSelectSection:section];
     }
-    else
+    else if (rowIsSectionHeader == NO &&
+             [self.jwcTableViewDelegate respondsToSelector:@selector(tableView:shouldSelectRowAtIndexPath:)] == YES)
     {
         NSIndexPath *indexPath = [self tableView:tableView
                                  indexPathForRow:row];
@@ -262,6 +264,12 @@
 -(NSIndexPath *)indexPathForView:(NSView *)view
 {
     NSInteger row = [super rowForView:view];
+    
+    //Minimum row has to be 0
+    if (row < 0)
+    {
+        row = 0;
+    }
     
     BOOL rowIsSectionHeader = NO;
     

@@ -10,6 +10,7 @@
 
 @protocol JWCTableViewDelegate <NSObject>
 
+@optional
 //Selection
 -(BOOL)tableView:(NSTableView *)tableView shouldSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 -(BOOL)tableView:(NSTableView *)tableView shouldSelectSection:(NSInteger)section;

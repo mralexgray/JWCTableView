@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A7FB1DFB-6984-4D87-8F96-91741EF36516</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Table View Example</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>76C9C5E8-98DC-4028-83B3-14698A1B2270</key>
+		<string>ssh://github.com/NSWill/JWCTableView.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Table View Example.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>76C9C5E8-98DC-4028-83B3-14698A1B2270</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/NSWill/JWCTableView.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>76C9C5E8-98DC-4028-83B3-14698A1B2270</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>76C9C5E8-98DC-4028-83B3-14698A1B2270</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Table View Example</string>
+		</dict>
+	</array>
+</dict>
+</plist>
